@@ -61,6 +61,6 @@ class EventsController < ApplicationController
     end
 
     def set_user
-      @user = current_user
+      @user = current_user.all_following
     end
 end
