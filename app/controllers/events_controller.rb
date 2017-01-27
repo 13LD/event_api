@@ -17,7 +17,7 @@ class EventsController < ApplicationController
 
   # GET /events/1
   def show
-    render json: @event.comments
+    render json: @events = current_user.event
   end
 
   # POST /events
