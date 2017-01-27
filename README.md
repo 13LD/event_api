@@ -57,3 +57,20 @@ it allows you to insert files using this attribute
 
 
 Dockerize application haven't done yet :(
+
+
+### Usage 
+
+Create Database
+
+> rake db:migrate
+
+To load data from factory from lib/task/populate.rake
+
+> rake fill:data
+
+Run server
+
+> rails s 
+
+
