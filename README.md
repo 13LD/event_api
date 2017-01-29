@@ -6,10 +6,13 @@ Create event management system for planning events (Rest).
 User should be able to register in the system, create, read update and delete own
 events. Event entity must contain information about time, place, purpose etc. In addition, system should allow user to invite other users to the event and attach files to the event. Also, each event should have discussion board so participants could discuss event details etc.
 
+
+
 ### All Routes
 ![alt tag](https://s28.postimg.org/4uxoolw6l/2017_01_26_23_38_34.png)
 
-
+#### Deployed on Heroku  
+You can find deployed API at the following address:  https://apievent.herokuapp.com/auth/sign_in
 
 ### Authentication
 > gem 'devise_token_auth'
@@ -71,8 +74,16 @@ To load data from factory from lib/task/populate.rake
 
 > rake fill:data
 
+To run tests 
+
+> RAILS_ENV=test rake db:migrate 
+> bundle exec rspec
+
+
+
 Run server
 
 > rails s 
+
 
 
