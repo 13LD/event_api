@@ -1,5 +1,5 @@
 # Simple Event planning API
-
+![build](https://travis-ci.org/13LD/event_api.svg?branch=master)
 
 ## Task
 Create event management system for planning events (Rest).
@@ -8,6 +8,8 @@ events. Event entity must contain information about time, place, purpose etc. In
 
 ### All Routes
 ![alt tag](https://s28.postimg.org/4uxoolw6l/2017_01_26_23_38_34.png)
+
+
 
 ### Authentication
 > gem 'devise_token_auth'
