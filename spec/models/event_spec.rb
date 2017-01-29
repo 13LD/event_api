@@ -4,6 +4,8 @@ RSpec.describe Event, type: :model do
   describe "event" do 
 
     it "should be created" do
+      create(:user)
+
       event_count = Event.count	
       create(:event)
       expect(Event.count).to eq(event_count + 1)
