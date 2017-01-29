@@ -8,7 +8,7 @@ class EventsController < ApplicationController
   # GET /events
   def index
     if params[:interval]
-        @events = current_user.events.where(:time => Time.now..Time.now + params[:interval].to_i.day)
+        @events = current_user.events.where(:when => Time.now..Time.now + params[:interval].to_i.day)
     else
         @events = current_user.events
     end
@@ -17,7 +17,7 @@ class EventsController < ApplicationController
 
   # GET /events/1
   def show
-    render json: @events = current_user.event
+    render json: @events = current_user.events
   end
 
   # POST /events
@@ -61,6 +61,6 @@ class EventsController < ApplicationController
     end
 
     def set_user
-      @user = current_user.all_following
+      @user = current_user
     end
 end

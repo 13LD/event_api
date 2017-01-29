@@ -11,7 +11,7 @@ class CommentController < ApplicationController
     @comment.save
 
     if @comment.save
-      render json: @comment, status: :created, location: @comment
+      render status: :created
     else
       render json: @comment.errors, status: :unprocessable_entity
     end
@@ -28,5 +28,9 @@ class CommentController < ApplicationController
     @commentable_type = params[:commentable_type].classify
     @commentable = @commentable_type.constantize.find(params[:commentable_id])
   end
+  
+  def set_user
+    @user = current_user
+  end
 end
-end
+
