@@ -1,5 +1,5 @@
 # Simple Event planning API
-![build](https://travis-ci.org/13LD/event_api.svg?branch=master)
+![build + tests](https://travis-ci.org/13LD/event_api.svg?branch=master)
 
 ## Task
 Create event management system for planning events (Rest).
