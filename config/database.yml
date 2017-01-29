@@ -47,8 +47,15 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
+# production:
+#   <<: *default
+#   database: event_manager_production
+#   username: event_api
+#   password: <%= ENV['EVENT_API_DATABASE_PASSWORD'] %>
 production:
-  <<: *default
-  database: event_manager_production
-  username: event_api
-  password: <%= ENV['EVENT_API_DATABASE_PASSWORD'] %>
+  database: example_production
+  adapter: postgresql
+  host: localhost
+  password:
+  encoding: utf8
+  pool: 15
