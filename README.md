@@ -60,8 +60,33 @@ it allows you to insert files using this attribute
 
 
 
+#### Running the project with docker
 
-Dockerize application haven't done yet :(
+This project relies on `docker-compose` for dependency management. You can find information
+on how to install it [here](https://docs.docker.com/compose/install/).
+
+When first running the app, or when changing the `Gemfile` or `docker-compose.yml` run:
+```
+docker-compose build
+```
+
+You can boot the app with:
+```
+docker-compose up
+```
+
+To run commands such as `rake` tasks or `rails` commands run:
+```
+docker-compose run web <your_command_and_arguments>
+```
+
+## Developing
+
+While developing, keep checking the tests with:
+
+```
+docker-compose run web bundle exec rspec
+```
 
 
 ### Usage 
